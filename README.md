@@ -43,6 +43,27 @@ Az alkalmazás jelenleg 24 tesztállat adataival működik.
 
 A szervernek futnia kell ahhoz, hogy a kliens meg tudja jeleníteni az ajánlásokat.
 
+## Fontos tudnivalók az indításhoz
+
+A GitHubról letöltött ZIP-fájl kibontása után előfordulhat, hogy a Visual Studio biztonsági korlátozás miatt nem tudja feldolgozni valamelyik `.resx` fájlt (MSB3821 hiba).
+
+Ebben az esetben:
+
+1. A Fájlkezelőben keresse meg az érintett fájlt, például `AllatKliens/Form1.resx`.
+2. Kattintson rá jobb gombbal, majd válassza a **Tulajdonságok** lehetőséget.
+3. Az **Általános** fülön jelölje be a **Feloldás** opciót, majd kattintson az **Alkalmaz** gombra.
+4. Visual Studióban válassza a **Build → Rebuild Solution** lehetőséget.
+
+Ha több fájlnál is jelentkezik ugyanez a hiba, azoknál is el kell végezni a feloldást.
+
+## Megjegyzés a tesztadatokhoz
+
+Bár a beadandó a sárospataki Tokaj-Hegyalja Egyetem számára készült, az adatbázisban szereplő tesztállatok többsége Baranya vármegyei településekhez tartozik.
+
+Ennek oka, hogy Baranya vármegyében élek, így a tesztadatok összeállításánál elsősorban a számomra ismerős településeket választottam.
+
+A program működése azonban nincs Baranya vármegyére korlátozva. A települések koordinátáinak lekéréséhez külső API-t használ, így más magyarországi településekkel is kipróbálható. A találatok természetesen a jelenlegi tesztadatbázisban szereplő állatoktól és a megadott távolságtól függenek.
+
 ## A projekt felépítése
 
 - `AllatKliens` – Windows Forms kliensalkalmazás
