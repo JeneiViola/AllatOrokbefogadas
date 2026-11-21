@@ -1,0 +1,6 @@
+@AllatOrokbefogadas.API_HostAddress = http://localhost:5293
+
+GET {{AllatOrokbefogadas.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
